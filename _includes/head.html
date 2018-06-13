@@ -1,0 +1,99 @@
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+
+<title>{{ page.title }}</title>
+
+<meta name="description" content="{{ page.description }}">
+
+<meta name="author" content="{{ site.contact.author }}">
+
+<link rel="canonical" href="{{ site.url }}">
+
+
+<meta name="theme-color" content="#{{ site.colors.theme }}">
+
+<link rel="apple-touch-icon" href="{{ site.url }}/apple-touch-icon.png">
+
+<link rel="icon" type="image/png" href="{{ site.url }}/img/favicon-32x32.png" sizes="32x32">
+
+<link rel="icon" type="image/png" href="{{ site.url }}/img/favicon-96x96.png" sizes="96x96">
+
+<link rel="icon" type="image/svg+xml" href="{{ site.url }}/img/favicon.svg">
+
+<link rel="mask-icon" href="{{ site.url }}/img/pinned-tab.svg" color="#8338EC">
+
+<link rel="manifest" href="{{ site.url }}/manifest.json">
+
+
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="twitter:title" content="{{ page.title }}">
+
+<meta name="twitter:description" content="{{ page.description }}">
+
+<meta name="twitter:image" content="{{ page.image | default: site.images.main }}">
+
+<meta name="twitter:image:alt" content="">
+
+<meta property="og:type" content="website">
+
+<meta property="og:title" content="{{ page.title }}">
+
+<meta property="og:site_name" content="{{ site.title }}">
+
+<meta property="og:description" content="{{ page.description }}">
+
+<meta property="og:image" content="{{ page.image | default: site.images.main }}">
+
+<meta property="og:image:width" content="526">
+
+<meta property="og:image:height" content="275">
+
+<meta property="og:image:type" content="image/gif">
+
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+
+
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="//fonts.googleapis.com/">
+
+{%- if page.id == "home" -%}
+<link rel="preload" href="{{ site.url }}/img/turntable-sprite.svg" as="image">
+{%- endif -%}
+
+{%- capture critical -%}{%- include critical/site.scss -%}{%- endcapture -%}
+<style>{{ critical | scssify }}</style>
+
+
+<script type="application/ld+json">
+{
+	"@context":"http://schema.org",
+	"@type":"WebSite",
+	"name":"{{ page.title }}",
+	"description":"{{ page.description }}",
+	"url":"{{ site.url }}",
+	"image":"{{ page.image | default: site.images.main }}",
+	"creator":{
+		"@type":"Person",
+		"name":"{{ site.contact.author }}",
+		"email":"{{ site.contact.email }}",
+		"telephone":"+{{ site.contact.phone | remove: "-" }}",
+		"address":"{{ site.contact.address }}"
+	},
+	"sameAs":"{{ site.same.github }}",
+	"sameAs":"{{ site.same.npm }}"
+}
+</script>
+
+<noscript id="ds">
+
+	<link href="https://fonts.googleapis.com/css?family=Heebo:300,700" rel="stylesheet">
+
+	<link href="/css/master.css" rel="stylesheet">
+
+	<link href="/css/desktop.css" rel="stylesheet" media="(min-width:1290px)">
+
+</noscript>
+
+<script>function e(){var e=document.getElementById("ds"),n=document.createElement("div");n.innerHTML=e.textContent,document.body.appendChild(n),e.parentElement.removeChild(e)}var n=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;n?n(function(){window.setTimeout(e,0)}):window.addEventListener("load",e);</script>

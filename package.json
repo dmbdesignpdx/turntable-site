@@ -1,0 +1,22 @@
+{
+	"name": "turntable",
+	"version": "1.0.0",
+	"description": "Turntable is an SCSS library built to freshen up your style sheets on the fly.",
+	"main": "dist/main.min.js",
+	"homepage": "https://turntablelib.com",
+	"repository": "https://github.com/dmbdesignpdx/turntable.git",
+	"author": "Daniel Blake <daniel@danielblake.design> (danielblake.design)",
+	"license": "MIT",
+	"devDependencies": {
+		"babel-core": "^6.26.0",
+		"babel-preset-env": "^1.6.1",
+		"browser-sync": "^2.23.6",
+		"gulp": "^4.0.0",
+		"gulp-babel": "^7.0.1",
+		"gulp-concat": "^2.6.1",
+		"gulp-plumber": "^1.2.0",
+		"gulp-shell": "^0.6.5",
+		"gulp-uglify": "^3.0.0",
+		"turntable-kit": "^0.6.2"
+	}
+}

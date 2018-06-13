@@ -1,0 +1,51 @@
+address {
+	font-style: normal
+}
+
+span.nobr {
+	white-space: nowrap
+}
+
+p {
+	@include shortCopy;
+	line-height: 1.5
+}
+
+.grid {
+	display: grid;
+	width: 100%;
+	max-width: 1326px;
+	padding: 4.4vw;
+	margin: 0 auto;
+	grid: none/repeat(12, 1fr);
+	grid-gap: 4.4vw;
+	gap: 4.4vw;
+
+	@include phoneLan {
+		padding: 2.8vw;
+		grid-gap: 2.8vw;
+		gap: 2.8vw
+	}
+
+	@include tabletPor {
+		padding: 3.2vw;
+		grid-gap: 3.2vw;
+		gap: 3.2vw
+	}
+
+	@include tabletLan {
+		padding: 2.4vw;
+		grid-gap: 2.4vw;
+		gap: 2.4vw
+	}
+
+	@include desktop {
+		padding: 30px;
+		grid-gap: 30px;
+		gap: 30px
+	}
+
+	@include desktopLG {
+		max-width: 1496px
+	}
+}
