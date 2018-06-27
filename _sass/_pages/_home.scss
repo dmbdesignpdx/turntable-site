@@ -89,7 +89,7 @@ main {
 
 #presets {
 	padding: 150px 0 30px;
-	background: url(/img/magenta.svg) 100% 92%/80% 38% no-repeat;
+	background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 706 862' preserveAspectRatio='none'><polygon points='706 862 0 238 706 0 706 862' fill='%23ff006e'/></svg>") 100% 92%/80% 38% no-repeat;
 
 	@include phoneLan {
 		padding: 260px 0 220px;
@@ -136,7 +136,7 @@ main {
 
 #record {
 	padding: 60px 0 90px;
-	background: url(/img/blue.svg) 0% 92%/94% 40% no-repeat;
+	background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 630' preserveAspectRatio='none'><polygon points='0 630 0 0 1024 354 0 630' fill='%233a86ff'/></svg>") 0% 92%/94% 40% no-repeat;
 
 	@include phoneLan {
 		padding: 0 0 350px;
@@ -182,7 +182,7 @@ main {
 
 #mixer {
 	padding: 60px 0 30px;
-	background: url(/img/yellow.svg) 100% 92%/84% 50% no-repeat;
+	background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 598 592' preserveAspectRatio='none'><polygon points='598 592 598 0 0 420 598 592' fill='%23fdbe0b'/></svg>") 100% 92%/84% 50% no-repeat;
 
 	@include phoneLan {
 		padding: 120px 0 150px;

@@ -17,6 +17,6 @@
 		"gulp-plumber": "^1.2.0",
 		"gulp-shell": "^0.6.5",
 		"gulp-uglify": "^3.0.0",
-		"turntable-kit": "^0.6.2"
+		"turntable-kit": "^0.7.0"
 	}
 }
