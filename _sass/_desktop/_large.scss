@@ -6,6 +6,7 @@
 
 	header input {
 		cursor: pointer;
+		cursor: copy;
 	
 		&:hover {
 			background: value(color(action),5);

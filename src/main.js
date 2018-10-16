@@ -1,26 +1,42 @@
 !function(){
-// -- Vars
-const install = document.querySelector("#install"),
+//
+// Variables
+//
+
+const
+install = document.querySelector("#install"),
 original = install.value
 
 
-// -- Functions
 
-// Copy Install
-install.onclick = function() {
-	this.select()
+//
+// Functions
+//
+
+/**
+ * @name copyLink
+ * @description Copies link
+ * @returns {undefined}
+ */
+install.addEventListener("click", e => {
+   const btn = e.target
+
+   btn.select()
+
+   // Try copying
 	try {
 		document.execCommand("copy")
-		this.value = "copied!"
-		let a = setTimeout(() => {
-			this.value = original
-			clearTimeout(a)
-		}, 2000)
-	} catch (e) {
-		this.select()
+      btn.value = "copied!"
+
+      // Reset link value
+      let reset = setTimeout(() => {
+         btn.value = original
+			clearTimeout(reset)
+      }, 2000)
+   
+   // Else just select
+   } catch (e) {
+		btn.select()
 	}
-}
-
-
-// -- Invoke
+})
 }()

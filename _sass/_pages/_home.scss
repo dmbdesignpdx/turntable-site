@@ -48,7 +48,7 @@ main {
 		text-align: center
 	}
 
-	h2, p, a, [role=img] {
+	h2, p, a, picture {
 		grid-column: 1 / -1
 	}
 
@@ -76,12 +76,15 @@ main {
 		}
 	}
 
-	[role=img] {
-		@include filter((drop-shadow(0 40px 14px ts(0.25))));
+	picture {
 		margin: 15px;
 
 		@include phoneLan {
 			margin: 0
+		}
+
+		img {
+			@include filter((drop-shadow(0 40px 14px ts(0.25))));
 		}
 	}
 }
@@ -123,12 +126,16 @@ main {
 		}
 	}
 
-	[role=img] {
-		background-position: 33.333% 0;
+	picture {
 
 		@include phoneLan {
 			grid-column: 7 / 12;
 			grid-row: 1 / 4
+		}
+
+		img {
+			-o-object-position: 33.333% 0;
+			object-position: 33.333% 0
 		}
 	}
 }
@@ -169,12 +176,16 @@ main {
 		}
 	}
 
-	[role=img] {
-		background-position: 66.666% 0;
+	picture {
 
 		@include phoneLan {
 			grid-column: 2 / 7;
 			grid-row: 1 / 4
+		}
+
+		img {
+			-o-object-position: 66.666% 0;
+			object-position: 66.666% 0
 		}
 	}
 }
@@ -216,12 +227,16 @@ main {
 		}
 	}
 
-	[role=img] {
-		background-position: 100% 0;
+	picture {
 
 		@include phoneLan {
 			grid-column: 7 / 12;
 			grid-row: 1 / 4
+		}
+		
+		img {
+			-o-object-position: 100% 0;
+			object-position: 100% 0
 		}
 	}
 }

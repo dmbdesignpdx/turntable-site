@@ -15,21 +15,22 @@ html {
 	font: 18px Heebo, Helvetica, sans-serif
 }
 
-body, h1, h2, h3, h4, p, pre, input, figure {
+body, h1, input {
 	padding: 0;
 	margin: 0;
 	border: 0
 }
 
-h1, h2, h3 {
-	text-align: inherit;
+h1 {
+	@include title;
+	text-align: inherit
 }
 
-svg, input, [role=img]::before, header::after {
+svg, input, img, picture, header::after {
 	display: block
 }
 
-a, abbr {
+a {
 	text-decoration: none;
 	color: inherit
 }
@@ -45,14 +46,22 @@ svg {
 	stroke-linejoin: round
 }
 
-[role=img] {
-	background: url(/img/turntable-sprite.svg) no-repeat;
-	background-size: 400% 100%;
+picture {
+	position: relative;
 
 	&::before {
+		display: block;
+		content: "";
 		padding-top: 60%;
-		content: ""
 	}
+}
+
+img {
+	@include size(100%);
+	@include xy(0);
+	position: absolute;
+	-o-object-fit: cover;
+	object-fit: cover;
 }
 
 nav a, header h1 {
@@ -144,13 +153,16 @@ header {
 		}
 	}
 
-	[role=img] {
-		@include filter((drop-shadow(0 40px 14px ts(0.3))));
+	picture {
 		width: 90%;
 		max-width: 560px;
-		height: auto;
 		margin: 50px auto 0;
-		background-position: 0 0
+	}
+
+	img {
+		@include filter((drop-shadow(0 40px 14px ts(0.3))));
+		-o-object-position: 0 0;
+		object-position: 0 0
 	}
 }
 
@@ -164,7 +176,7 @@ header {
 
 	header {
 
-		[role=img] {
+		picture {
 			width: 70%
 		}
 	}
@@ -199,7 +211,7 @@ header {
 			font-size: 2.2rem
 		}
 	
-		[role=img] {
+		img {
 			@include filter((drop-shadow(0 50px 18px ts(0.3))))
 		}
 	}
@@ -246,7 +258,7 @@ header {
 			font-size: 2.4rem
 		}
 
-		[role=img] {
+		picture {
 			max-width: 660px;
 			margin-top: 80px
 		}
