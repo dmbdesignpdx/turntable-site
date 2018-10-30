@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+
+{{ partial "head.html" . }}
+
+</head>
+
+<body>
+
+{{ .Content }}
+
+{{ partialCached "footer.html" . }}
+
+{{ partialCached "defer.html" . }}
+
+</body>
+</html>

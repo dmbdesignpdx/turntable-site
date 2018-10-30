@@ -1,0 +1,62 @@
+footer {
+	padding: 60px 0 90px;
+	color: #FFF;
+	background: #000;
+	font-size: 0.9rem;
+
+	address, p {
+		grid-column: 1 / -1
+   }
+   
+   address {
+      margin-bottom: 18px;
+
+      @include tabletPor {
+         margin-bottom: 24px;
+      }
+   }
+	
+	a {
+		font-weight: 700;
+		color: color(action);
+	}
+
+	svg {
+		width: auto;
+		height: 30px;
+		margin-top: 60px;
+		stroke: #999;
+		grid-column: 1 / -1
+	}
+
+	p:last-of-type {
+		grid-column: 1 / -1
+	}
+
+	small {
+		color: #AAA
+	}
+}
+
+@include phoneLan {
+
+	footer {
+	
+		address, p {
+			grid-column: 1 / span 4
+		}
+	
+		p:first-of-type {
+			grid-row: 2
+		}
+	
+		p:last-of-type, svg {
+			grid-column: 9 / -1
+		}
+
+		svg {
+			margin-top: 0
+		}
+	}
+
+}
