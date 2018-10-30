@@ -1,0 +1,77 @@
+@include desktop {
+
+	nav a:hover {
+		color: #FFF
+	}
+
+	header input {
+		cursor: pointer;
+		cursor: copy;
+	
+		&:hover {
+			background: value(color(action),5);
+			box-shadow: 0 2px 8px ts(0.4)
+		}
+   }
+   
+   footer address {
+      margin-bottom: 30px
+   }
+	
+	section a:hover {
+		box-shadow: 0 2px 7px ts(0.4)
+	}
+	
+	#presets {
+	
+		a:hover {
+			background: value(color(third),5)
+		}
+	}
+	
+	#record {
+	
+		a:hover {
+			background: value(color(fourth),5);
+		}
+	}
+	
+	#mixer {
+	
+		a:hover {
+			background: value(color(fifth),5);
+		}
+	}
+	
+	#action {
+	
+		a:hover {
+			background: value(color(action),5);
+		}
+	}
+	
+}
+
+@include desktopLG {
+
+	#presets {
+		padding: 300px 0 370px;
+		background-size: 48% 88%;
+		background-position: 100% 80%
+	}
+
+	#record {
+		background-size: 70% 90%
+	}
+
+	#mixer {
+		padding: 180px 0 150px;
+		background-size: 44% 90%;
+		background-position: 100% 20%
+	}
+
+	#action {
+		padding: 270px 0 330px
+	}
+
+}

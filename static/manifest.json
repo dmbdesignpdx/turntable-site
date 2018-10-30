@@ -1,0 +1,21 @@
+{
+   "name": "Turntable - Sass Library",
+   "short_name": "Turntable",
+   "icons": [
+      {
+          "src": "/img/android-chrome-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+      },
+      {
+          "src": "/img/android-chrome-256x256.png",
+          "sizes": "256x256",
+          "type": "image/png"
+      }
+  ],
+  "start_url": "/index.html",
+  "theme_color": "#8338EC",
+  "background_color": "#8338EC",
+  "display": "standalone",
+  "orientation": "portrait"
+}

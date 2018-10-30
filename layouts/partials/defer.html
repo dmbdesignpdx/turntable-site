@@ -1,0 +1,13 @@
+<div>
+
+	<link href="https://fonts.googleapis.com/css?family=Heebo:300,700" rel="stylesheet">
+
+   {{ $master := resources.Get "css/master.scss" | toCSS | minify }}
+   <link href="{{ $master.RelPermalink }}" rel="stylesheet">
+
+   {{ $desktop := resources.Get "css/desktop.scss" | toCSS | minify }}
+   <link media="(min-width:1290px)" href="{{ $desktop.RelPermalink }}" rel="stylesheet">
+   
+   <script>"use strict";!function(){var e=document.querySelector("#install"),c=e.value;e.onclick=function(){var e=this;this.select();try{document.execCommand("copy"),this.value="copied!";var t=setTimeout(function(){e.value=c,clearTimeout(t)},2e3)}catch(e){this.select()}}}();</script>
+
+</div>

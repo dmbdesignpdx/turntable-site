@@ -1,0 +1,9 @@
+languageCode: "en-us"
+baseURL: "https://turntablelib.com"
+title: Turntable
+disableKinds:
+  - taxonomy
+  - taxonomyTerm
+  - RSS
+disableHugoGeneratorInject: true
+enableEmoji: true
